@@ -67,7 +67,7 @@ public class CustomPersisenceUnitInfo implements PersistenceUnitInfo {
 
     @Override
     public List<String> getManagedClassNames() {
-        return List.of("com.uexcel.entity.Person", "com.uexcel.entity.CreditCard");
+        return List.of("com.uexcel.entity.Account", "com.uexcel.entity.CreditCard");
     }
 
     @Override
@@ -89,7 +89,7 @@ public class CustomPersisenceUnitInfo implements PersistenceUnitInfo {
     public Properties getProperties() {
         Properties p = new Properties();
         p.setProperty("hibernate.show_sql", "true");
-        p.setProperty("hibernate.hbm2ddl.auto", "create");
+        p.setProperty("hibernate.hbm2ddl.auto", "update");
         return p;
     }
 
